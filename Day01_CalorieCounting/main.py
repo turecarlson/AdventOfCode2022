@@ -26,7 +26,16 @@ def main():
         total_cal_per_elf.append(total_calories)
 
     # determine max value in total_cal_per_elf
-    print(max(total_cal_per_elf))
+    print("elf carrying most caloires total:", max(total_cal_per_elf))
 
+    # PART 2 - find total total calories of top 3 elves
+
+    # sort list of total calories per elf
+    total_cal_per_elf.sort()
+    top_three = total_cal_per_elf[-3:]
+    total_top_three = 0
+    for calories in top_three:
+        total_top_three += calories
+    print("total calories for top three elves:", total_top_three)
 if __name__ == '__main__':
     main()
